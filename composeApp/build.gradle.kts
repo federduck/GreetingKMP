@@ -7,8 +7,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     kotlin("plugin.serialization") version "2.3.20"
-    id("com.google.devtools.ksp")
-    id("com.rickclephas.kmp.nativecoroutines")
+    id("co.touchlab.skie") version "0.10.10"
 }
 
 kotlin {
@@ -33,10 +32,6 @@ kotlin {
     sourceSets {
         all {
             languageSettings.optIn("kotlin.time.ExperimentalTime")
-            languageSettings {
-                optIn("kotlin.experimental.ExperimentalObjCName")
-                optIn("kotlin.time.ExperimentalTime")
-            }
         }
         androidMain.dependencies {
             implementation(libs.compose.uiToolingPreview)

@@ -1,5 +1,6 @@
 package com.jetbrains.greeting.greetingkmp
 
+import com.rickclephas.kmp.nativecoroutines.NativeCoroutines
 import kotlin.random.Random
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
