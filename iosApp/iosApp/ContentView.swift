@@ -11,10 +11,13 @@ struct ComposeView: UIViewControllerRepresentable {
 }
 
 struct ContentView: View {
-    var body: some View {
-        ComposeView()
-            .ignoresSafeArea()
-    }
+   let phrases = Greeting().greet()
+
+   var body: some View {
+       List(phrases, id: \.self) {
+           Text($0)
+       }
+   }
 }
 
 
